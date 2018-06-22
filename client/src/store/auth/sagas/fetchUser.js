@@ -9,7 +9,6 @@ export default function* fetchUser() {
   try {
     // yield put(actions.fetchUser());
     const { data } = yield call(axios.get, '/api/current_user');
-    // console.log({ data });
     yield put(actions.fetchUserSuccess(data || false));
   } catch (error) {
     console.log(error);

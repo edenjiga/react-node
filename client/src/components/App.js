@@ -5,8 +5,8 @@ import { actions } from '../store/auth';
 
 import Header from './Header';
 import Landing from './Landing';
-const Dashboard = () => <h2> Dashboard </h2>;
-const SurveyNew = () => <h2> SurveyNew </h2>;
+import Dashboard from './Dashboard';
+import SurveyNew from './surveys/SurveyNew';
 
 class App extends Component {
   componentDidMount() {
@@ -29,4 +29,7 @@ class App extends Component {
   }
 }
 
-export default connect(null, { fetchUser: actions.fetchUser })(App);
+export default connect(
+  null,
+  { fetchUser: actions.fetchUser }
+)(App);
